@@ -4,7 +4,9 @@ const AddLogModal = () => {
   const [message, setMessage] = useState("");
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState("");
-
+  const onSubmit = () => {
+    console.log(message, tech, attention);
+  };
   return (
     <div id="add-log-modal" className="modal" style={modalStyle}>
       <div className="modal-content">
