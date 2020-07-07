@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import AddTechModal from "./AddTechModal";
 
 const TechListModal = () => {
   const [techs, setTechs] = useState([]);
@@ -18,22 +19,19 @@ const TechListModal = () => {
     setLoading(false);
   };
 
-  if (loading) {
-    return <Preloader />;
-  }
-
   return (
-    <ul className="collection with-header">
-      <li className="collection-header">
-        <h4 className="center">System Logs</h4>
-      </li>
-      {!loading && logs.length === 0 ? (
-        <p className="center">No logs to show...</p>
-      ) : (
-        logs.map((log) => <LogItem log={log} key={log.id} />)
-      )}
-    </ul>
+    <div id="tech-list-modal" className="modal">
+      <div className="modal-contents">
+        <h4>Technician List</h4>
+        <ul className="collection">
+          {!loading &&
+            techs.map((tech) => (
+              <li className="collection-item">{tech.firstName}</li>
+            ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 
-export default Logs;
+export default TechListModal;
