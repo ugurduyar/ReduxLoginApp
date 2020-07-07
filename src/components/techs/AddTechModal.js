@@ -17,51 +17,31 @@ const AddTechModal = () => {
   return (
     <div id="add-tech-modal" className="modal">
       <div className="modal-content">
-        <h4>Enter System Log</h4>
+        <h4>New Technician</h4>
         <div className="row">
           <div className="input-field">
             <input
               type="text"
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              name="firstName"
+              value={firstName}
+              onChange={(e) => setfirstName(e.target.value)}
             />
-            <label htmlFor="message" className="active">
-              Log Message
+            <label htmlFor="firstName" className="active">
+              First Name
             </label>
           </div>
         </div>
         <div className="row">
           <div className="input-field">
-            <select
-              name="tech"
-              value={tech}
-              className="browser-default"
-              onChange={(e) => setTech(e.target.value)}
-            >
-              <option value="" disabled>
-                Select Technician
-              </option>
-              <option value="John Doe">John Doe</option>
-              <option value="Sam Smith">Sam Smith</option>
-              <option value="Sara Wilson">Sara Wilson</option>
-            </select>
-          </div>
-        </div>
-        <div className="row">
-          <div className="input-field">
-            <p>
-              <label>
-                <input
-                  type="checkbox"
-                  className="filled-in"
-                  checked={attention}
-                  value={attention}
-                  onChange={(e) => setAttention(!attention)}
-                />
-                <span>Needs Attention</span>
-              </label>
-            </p>
+            <input
+              type="text"
+              name="lastName"
+              value={lastName}
+              onChange={(e) => setlastName(e.target.value)}
+            />
+            <label htmlFor="lastName" className="active">
+              Last Name
+            </label>
           </div>
         </div>
       </div>
@@ -78,4 +58,4 @@ const AddTechModal = () => {
   );
 };
 
-export default AddLogModal;
+export default AddTechModal;
