@@ -15,7 +15,7 @@ const AddTechModal = () => {
     }
   };
   return (
-    <div id="tech-modal" className="modal" style={modalStyle}>
+    <div id="add-tech-modal" className="modal">
       <div className="modal-content">
         <h4>Enter System Log</h4>
         <div className="row">
@@ -76,11 +76,6 @@ const AddTechModal = () => {
       </div>
     </div>
   );
-};
-
-const modalStyle = {
-  width: "75%",
-  height: "75%",
 };
 
 export default AddLogModal;
