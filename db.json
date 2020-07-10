@@ -1,5 +1,13 @@
 {
-  "logs": [],
+  "logs": [
+    {
+      "id": 1,
+      "message": "fixed! sss",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2020-07-10T03:39:51.070Z"
+    }
+  ],
   "techs": [
     {
       "id": 1,
