@@ -94,7 +94,7 @@ const AddLogModal = ({ addLog }) => {
 };
 
 AddLogModal.propTypes = {
-  addLogL: PropTypes.func.isRequired,
+  addLog: PropTypes.func.isRequired,
 };
 
 const modalStyle = {
