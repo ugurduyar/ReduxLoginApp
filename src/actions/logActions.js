@@ -20,7 +20,7 @@ export const getLogs = () => async (dispatch) => {
 };
 
 // Add new log
-export const addLogs = (log) => async (dispatch) => {
+export const addLog = (log) => async (dispatch) => {
   try {
     setLoading();
     const res = await fetch("/logs", {
