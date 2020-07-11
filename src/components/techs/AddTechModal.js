@@ -7,6 +7,7 @@ import M from "materialize-css/dist/js/materialize.min.js";
 const AddTechModal = ({ addTech }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+
   const onSubmit = () => {
     if (firstName === "" || lastName === "") {
       M.toast({ html: "Please enter the first and last name" });
@@ -15,6 +16,9 @@ const AddTechModal = ({ addTech }) => {
         firstName,
         lastName,
       });
+
+      M.toast({ html: `${firstName} ${lastName} was added as a tech! ` });
+
       // Clear fields
       setFirstName("");
       setLastName("");
